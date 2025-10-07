@@ -1,0 +1,44 @@
+Table Client {
+  id int [pk, increment]
+  name varchar
+  email varchar [unique]
+  password_hash varchar
+  registration_date date
+}
+
+Table Category {
+  id int [pk, increment]
+  name varchar
+  description text
+}
+
+Table Product {
+  id int [pk, increment]
+  category_id int [ref: > Category.id]
+  sku varchar
+  name varchar
+  description text
+  price decimal
+  quantity int
+  is_active boolean
+  material varchar
+  brand varchar
+}
+
+Table "Order" {
+  id int [pk, increment]
+  client_id int [ref: > Client.id]
+  order_date date
+  status varchar
+  total decimal
+}
+
+Table OrderItem {
+  order_id int [ref: > Order.id]
+  product_id int [ref: > Product.id]
+  quantity int
+  price decimal
+  indexes {
+    (order_id, product_id) [pk]
+  }
+}
