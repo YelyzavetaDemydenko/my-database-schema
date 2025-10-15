@@ -1,44 +1,45 @@
 Table Client {
   id int [pk, increment]
-  name varchar
-  email varchar [unique]
-  password_hash varchar
-  registration_date date
+  name varchar(255) [not null]
+  email varchar(255) [not null, unique]
+  password_hash varchar(255) [not null]
+  registration_date date [not null, default: `CURRENT_DATE`]
 }
 
 Table Category {
   id int [pk, increment]
-  name varchar
+  name varchar(255) [not null, unique]
   description text
 }
 
 Table Product {
   id int [pk, increment]
-  category_id int [ref: > Category.id]
-  sku varchar
-  name varchar
+  category_id int [not null, ref: > Category.id]
+  sku varchar(100) [not null, unique]
+  name varchar(255) [not null]
   description text
-  price decimal
-  quantity int
-  is_active boolean
-  material varchar
-  brand varchar
+  price decimal(10,2) [not null, default: 0.00]
+  quantity int [not null, default: 0]
+  is_active boolean [not null, default: true]
+  material varchar(100)
+  brand varchar(100)
 }
 
 Table "Order" {
   id int [pk, increment]
-  client_id int [ref: > Client.id]
-  order_date date
-  status varchar
-  total decimal
+  client_id int [not null, ref: > Client.id]
+  order_date date [not null, default: `CURRENT_DATE`]
+  status varchar(50) [not null, default: 'new']
+  total decimal(10,2) [not null, default: 0.00]
 }
 
 Table OrderItem {
-  order_id int [ref: > Order.id]
-  product_id int [ref: > Product.id]
-  quantity int
-  price decimal
+  order_id int [not null, ref: > Order.id]
+  product_id int [not null, ref: > Product.id]
+  quantity int [not null, default: 1]
+  price decimal(10,2) [not null]
   indexes {
     (order_id, product_id) [pk]
   }
 }
+
