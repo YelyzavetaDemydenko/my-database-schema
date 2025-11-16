@@ -18,3 +18,22 @@ https://dbdocs.io/Yelyzaveta%20Demydenko/schema
 Лабораторна робота 2
 
 Було додано DDL-скрипт для створення структури бази даних (lab-work-02/1_create_schema.sql) та 5 DML-скриптів для наповнення таблиць даними.
+
+
+Лабораторна робота 3
+
+Додані файли:
+
+1. lab_3_DML.sql  
+   Файл містить запити DML (INSERT, UPDATE, DELETE) для додавання, зміни та видалення даних у таблицях `Client`, `Product` та `OrderItem`.
+
+2. lab_3_DQL.sql
+   Файл містить базові запити DQL (SELECT) з фільтрацією, умовами WHERE, LIKE, IN, а також сортуванням за допомогою ORDER BY.
+
+3. lab_3_DQL_extra.sql  
+   Файл містить комплексні аналітичні запити:  
+   - Агрегація даних (COUNT, SUM, AVG, MIN, MAX)  
+   - Використання GROUP BY та HAVING  
+   - Об’єднання таблиць через INNER JOIN та LEFT JOIN  
+   - Підзапити (Subquery)  
+   - Комбінування вибірок через UNION  
