@@ -36,4 +36,25 @@ https://dbdocs.io/Yelyzaveta%20Demydenko/schema
    - Використання GROUP BY та HAVING  
    - Об’єднання таблиць через INNER JOIN та LEFT JOIN  
    - Підзапити (Subquery)  
-   - Комбінування вибірок через UNION  
+   - Комбінування вибірок через UNION
+  
+
+Лабораторна робота 4
+
+Створені об’єкти та файли:
+
+1. View: v_Detailed_Orders - віртуальна таблиця, яка об’єднує дані з 4 таблиць (Order, Client, OrderItem, Product) для спрощеного звіту про продажі.
+- Скрипт: lab_4_view.sql
+- Простий SELECT для перевірки роботи v_Detailed_Orders: lab_4_view_test.sql
+
+
+2. Stored Procedure: sp_AddNewProduct - Додає новий товар у таблицю Product, приймає параметри: назва, опис, ціна, кількість, категорія, SKU, матеріал, бренд.
+- Скрипт створення: lab_4_procedure.sql
+- Скрипт тестування: lab_4_procedure_test.sql
+
+
+3. Trigger: trg_Products_BeforeUpdate - Автоматично оновлює колонку updated_at при зміні запису в таблиці Product.
+- Скрипт створення: lab_4_trigger.sql
+- Скрипт тестування: lab_4_trigger_test.sql
+
+
