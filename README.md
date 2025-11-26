@@ -58,3 +58,13 @@ https://dbdocs.io/Yelyzaveta%20Demydenko/schema
 - Скрипт тестування: lab_4_trigger_test.sql
 
 
+Лабораторна робота 5
+Було додано п’ять SQL-файлів:
+1. `lab_5_commit.sql` — демонстрація роботи COMMIT.  
+2. `lab_5_rollback.sql` — демонстрація роботи ROLLBACK.  
+3. `lab_5_index.sql` — створення індексу для колонки `name` у таблиці `Client`.  
+4. `lab_5_complex_transaction.sql` — реалізація бізнес-транзакції (створення замовлення та оновлення складу).  
+5. `lab_5_price_index_analysis.sql` — аналіз продуктивності запитів за ціною з EXPLAIN до і після створення індексу.
+
+
+
