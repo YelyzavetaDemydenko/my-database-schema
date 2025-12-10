@@ -8,4 +8,5 @@ GRANT SELECT ON Product TO 'web_client'@'localhost';
 
 
 -- 3. Оновлення привілеїв
+
 FLUSH PRIVILEGES;
